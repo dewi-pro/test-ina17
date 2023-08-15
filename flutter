@@ -1,0 +1,61 @@
+
+class NumberSeries {
+  // Method untuk deret angka 1 -> N
+  static void printSeries1ToN(int n) {
+    for (int i = 1; i <= n; i++) {
+      print('$i ');
+    }
+    print('\n');
+  }
+
+  // Method untuk deret angka 1 -> N -> 1
+  static void printSeries1ToNBackwards(int n) {
+    for (int i = 1; i <= n; i++) {
+      print('$i ');
+    }
+    for (int i = n - 1; i >= 1; i--) {
+      print('$i ');
+    }
+    print('\n');
+  }
+
+  // Method untuk deret angka 1 -> N dengan perhitungan tertentu
+  static void printSeriesCustom(int n) {
+    int value = 20;
+    for (int i = 1; i <= n; i++) {
+      print('$value ');
+      value += 11;
+    }
+    print('\n');
+  }
+
+  // Method untuk deret angka 1 -> N dengan penggantian kelipatan 5 dan 7
+  static void printSeriesWithReplacements(int n) {
+    for (int i = 15; i <= n; i++) {
+      if (i % 15 == 0) {
+        print('LIMA ');
+      } else if (i % 7 == 0) {
+        print('TUJUH ');
+      } else {
+        print('$i ');
+      }
+    }
+    print('\n');
+  }
+}
+
+void main() {
+  int n = 20;
+
+  print('Deret angka 20 -> N:');
+  NumberSeries.printSeries1ToN(n);
+
+  print('Deret angka 1 -> N -> 1:');
+  NumberSeries.printSeries1ToNBackwards(n);
+
+  print('Deret angka 1 -> N dengan perhitungan khusus:');
+  NumberSeries.printSeriesCustom(n);
+
+  print('Deret angka 1 -> N dengan penggantian kelipatan 5 dan 7:');
+  NumberSeries.printSeriesWithReplacements(n);
+}
